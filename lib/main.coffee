@@ -38,7 +38,7 @@ module.exports = MarkdownImgHelper =
 						# ascClip = "assets/#{filename}"
 						# clipboard.writeText(ascClip)
 
-						@insertUrl "assets/#{filename}",editor
+						@insertUrl "#{thefile.getBaseName().replace(/\.\w+$/, '').replace(/\s+/g,'')}/#{filename}",editor
 
 				return false
 
