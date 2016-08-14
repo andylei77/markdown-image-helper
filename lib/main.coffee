@@ -24,7 +24,7 @@ module.exports = MarkdownImgHelper =
 				imgbuffer = img.toPng()
 
 				thefile = new File(editor.getPath())
-				assetsDirPath = thefile.getParent().getPath()+"/assets"
+				assetsDirPath = thefile.getParent().getPath()+"/#{thefile.getBaseName().replace(/\.\w+$/, '').replace(/\s+/g,'')}"
 
 
 				crypto = require "crypto"
