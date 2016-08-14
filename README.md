@@ -1,8 +1,28 @@
 # Markdown Image Helper
 
-An Atom plugin for Markdown grammar. Create image file relative to the markdown file and insert a relative url to that file.
+To handle the image problem when using Hexo, I found this project [Give asset image in hexo a absolutely path automatically](https://github.com/CodeFalling/hexo-asset-image), but i have to create the image directory and copy image to it. There should be an easier way to do this, [markdown-image-helper](https://github.com/bigyuki/markdown-image-helper) meet the demand, I just fork it and change a little thing:
 
-Inspired by [markdown-assistant](https://github.com/knightli/markdown-assistant)，instead upload the image, i think just copy to the relative path is better.
+- Create an directory using the article's name (not always named "assets")
+- Paste the path of image to the the editor
+
+[]()
+
+## Install
+
+### local Install
+
+```shell
+# 1 change to the atom packages directory
+cd ~/.atom/packages/
+
+# 2 clone to the local
+git clone https://github.com/andylei77/markdown-image-helper.git
+
+# 3 using apm install to local
+cd markdown-image-helper
+apm install
+```
+
 
 ## Usage
 1. Take a screenshot or copy any image to the clipboard.
@@ -17,18 +37,3 @@ Inspired by [markdown-assistant](https://github.com/knightli/markdown-assistant)
 * After
 
     ![after](https://github.com/bigyuki/markdown-image-helper/raw/master/assets/README-d1eba.png)
-
-# Q&A
-- Does this plugin support on Windows system ?
-
-    According to the issue [#2](https://github.com/bigyuki/markdown-image-helper/issues/2), thanks to @[hgaronfolo](https://github.com/hgaronfolo) he said that
-
-        For markdown-image-helper to work, the language needs to be "Git Markdown", so on Windows Atom, I went in to settings, packages and searched for "language-gfm" (core package).
-        This package was disabled by default in Windows Atom, but enabled by default in Linux Atom.
-
-        I enabled "language-gfm", and now I can choose "Github Markdown" in Windows Atom and markdown-image-helper now works! :-)
-
-    so you should enable `language-gfm`, maybe i will work, if not please let me know.
-
-## Other
-If you are using [Hexo](https://github.com/hexojs/hexo) to writer blog or wiki , i think this small plugin [`hexo-generator-assets`](https://github.com/bigyuki/hexo-generator-assets) is helpful with `markdown-image-helper`
